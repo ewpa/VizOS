@@ -50,7 +50,7 @@ define Image/Build
 	# ${PWD}/image/genimage.sh -c  ${PWD}/image/genimage.cfg
 
 	rm -rf ${PWD}/image/tmp || true
-	genimage --rootpath $(call mkfs_target_dir,$(1)) --inputpath $(STAGING_DIR_IMAGE) --outputpath $(BIN_DIR) --config ${PWD}/image/genimage.cfg
+	PATH=/bin:/usr/bin:/usr/local/bin:/sbin genimage --rootpath $(call mkfs_target_dir,$(1)) --inputpath $(STAGING_DIR_IMAGE) --outputpath $(BIN_DIR) --config ${PWD}/image/genimage.cfg
 endef
 
 
