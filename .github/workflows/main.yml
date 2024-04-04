@@ -69,8 +69,8 @@ jobs:
       id: compile-milk-v-duo
       working-directory: /${{matrix.target}}
       run: |
-        git clone -b vizos --single-branch  https://github.com/Pillar1989/VizOS feeds-vizos
-        git clone https://github.com/Pillar1989/openwrt --single-branch
+        git clone -b vizos --single-branch  https://github.com/ewpa/VizOS feeds-vizos
+        git clone https://github.com/ewpa/openwrt milkv-duo --single-branch
         echo "src-link  vizos  ${PWD}/feeds-vizos" >> openwrt/feeds.conf.default
         cd openwrt
         cat feeds.conf.default
